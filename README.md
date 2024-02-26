@@ -3,24 +3,24 @@
 
 Common Linux Durectiry Names 
 
-/ -> root of the virtual directory , where normally , no files are placed
-/bin -> binary directory 
-/boot -> whre boot are stored
-/dev -> device directory , where linux creates device nodes
-/etc -> file di configurazione
-/home -> dove risiedono le cartelle utenti
-/media ->
-/mnt ->
-/opt -> optional directory , often used to store 3-party software packages and data files
-/proc -> process directory , where current hardware and process information is stored
-/root -> root home directory
-/sbin
-/run -> run directory , where runtime data is held during system operation
-/srv -> service directory, where local service store their files
-/sys -> system direcoty , 
-/tmp
-/usr
-/var  -> variabile directory, for files that change frequently , such as log files
+/ -> root of the virtual directory , where normally , no files are placed <br>
+/bin -> binary directory <br>
+/boot -> whre boot are stored<br>
+/dev -> device directory , where linux creates device nodes<br>
+/etc -> file di configurazione<br>
+/home -> dove risiedono le cartelle utenti<br>
+/media -><br>
+/mnt -><br>
+/opt -> optional directory , often used to store 3-party software packages and data files<br>
+/proc -> process directory , where current hardware and process information is stored<br>
+/root -> root home directory<br>
+/sbin<br>
+/run -> run directory , where runtime data is held during system operation<br>
+/srv -> service directory, where local service store their files<br>
+/sys -> system direcoty , <br>
+/tmp<br>
+/usr<br>
+/var  -> variabile directory, for files that change frequently , such as log files<br>
 
 
 # COMANDI LINUX 
