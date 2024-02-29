@@ -80,5 +80,45 @@ file [opzioni] nomefile
 _______________________________
 
 
+touch file_name  
+gedit file_name.sh 
+
+```bash
+#! /bin/bash  
+```
+
+## Hello Word in Bash 
+
+
+```bash
+#! /bin/bash  
+  
+# This is the basic bash script  
+  
+echo " Hello World! " 
+```
+
+chmod +x bash_script.sh   
+
+
+
+**Secondo programma**
+
+```bash
+    #!/bin/bash  
+      
+    #This is a single-line comment in Bash Script.  
+    echo "Enter your name:"  
+    read $name  
+    echo  
+    #echo output, its also a single line comment  
+    echo "The current user name is $name"  
+    #This is another single line comment  
+```
+
+
+
+
+
 
 
