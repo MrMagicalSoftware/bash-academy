@@ -919,6 +919,57 @@ do
 done
 ```
 
+_____________________________
+
+**while**
+
+
+```bash
+while [ condizione ]
+do
+    # Comandi da eseguire fintanto che la condizione è vera
+done
+```
+
+
+```bash
+#!/bin/bash
+
+contatore=1
+
+while [ $contatore -le 5 ]
+do
+    echo "Iterazione $contatore"
+    contatore=$((contatore + 1))
+done
+```
+
+_________________________________________________
+
+
+
+Il ciclo `until` in Bash è simile al ciclo `while`, ma esegue un blocco di comandi fintanto che una condizione specificata è falsa.
+
+```bash
+until [ condizione ]
+do
+    # Comandi da eseguire fintanto che la condizione è falsa
+done
+```
+
+
+```bash
+#!/bin/bash
+
+contatore=1
+
+until [ $contatore -gt 5 ]
+do
+    echo "Iterazione $contatore"
+    contatore=$((contatore + 1))
+done
+```
+
 
 
 
