@@ -77,8 +77,7 @@ file [opzioni] nomefile
    ```
    Questo comando mostra le informazioni sulla versione del comando `file`.
 
-Questi sono solo alcuni esempi, e ci sono molte altre opzioni disponibili. Puoi consultare la pagina di manuale per il comando `file` per ottenere una lista completa delle opzioni e ulteriori dettagli:
-
+_______________________________
 
 
 
