@@ -1043,9 +1043,75 @@ echo "Il risultato della moltiplicazione è: $moltiplicazione"
 ```
 
 
+_____________________________________
 
 
+# Bash Array
 
+
+In Bash, gli array sono utilizzati per memorizzare più valori in una singola variabile.
+
+
+### Dichiarazione di un array:
+```bash
+# Forma 1
+frutta=("Mela" "Pera" "Banana")
+
+# Forma 2
+frutta[0]="Mela"
+frutta[1]="Pera"
+frutta[2]="Banana"
+```
+
+### Accesso agli elementi di un array:
+```bash
+# Accesso a un singolo elemento
+echo ${frutta[1]}  # Output: Pera
+
+# Accesso a tutti gli elementi dell'array
+echo ${frutta[@]}  # Output: Mela Pera Banana
+
+# Accesso a tutti gli indici dell'array
+echo ${!frutta[@]}  # Output: 0 1 2
+
+# Accesso alla lunghezza dell'array
+echo ${#frutta[@]}  # Output: 3
+```
+
+### Iterazione attraverso gli elementi di un array:
+```bash
+# Iterazione attraverso gli elementi
+for elemento in "${frutta[@]}"
+do
+    echo $elemento
+done
+```
+
+### Modifica degli elementi di un array:
+```bash
+# Modifica di un elemento
+frutta[1]="Uva"
+
+# Aggiunta di un nuovo elemento
+frutta+=( "Ciliegia" )
+
+# Rimozione di un elemento
+unset frutta[2]
+```
+
+### Array associativi:
+Bash supporta anche array associativi, che utilizzano stringhe come chiavi invece di indici numerici. Ecco un esempio:
+
+```bash
+# Dichiarazione di un array associativo
+declare -A studente
+studente=( ["nome"]="Alice" ["età"]=25 ["corso"]="Informatica" )
+
+# Accesso agli elementi di un array associativo
+echo ${studente["nome"]}  # Output: Alice
+echo ${studente["età"]}   # Output: 25
+echo ${studente["corso"]} # Output: Informatica
+```
 
 
 
