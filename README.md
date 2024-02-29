@@ -359,11 +359,79 @@ echo "Il doppio di $numero è $doppio."
 
 
 
+_______________________________________________
 
 
+In Bash, il comando `date` viene utilizzato per visualizzare o manipolare la data e l'orario del sistema. Può essere utilizzato per ottenere la data corrente, formattarla in modi diversi o impostare una data specifica. 
+
+### Visualizzare la data e l'orario correnti:
+```bash
+#!/bin/bash
+
+current_date=$(date)
+echo "Data e orario correnti: $current_date"
+```
+
+### Formattare la data:
+```bash
+#!/bin/bash
+
+# Formato personalizzato
+formatted_date=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Data formattata: $formatted_date"
+```
+
+Alcuni dei formati di data e ora più comuni sono:
+- `%Y`: Anno a 4 cifre
+- `%m`: Mese (01-12)
+- `%d`: Giorno del mese (01-31)
+- `%H`: Ore (00-23)
+- `%M`: Minuti (00-59)
+- `%S`: Secondi (00-59)
+
+### Impostare una data specifica:
+```bash
+#!/bin/bash
+
+# Impostare una data specifica (2022-01-01 12:00:00)
+specific_date=$(date -d "2022-01-01 12:00:00" +"%Y-%m-%d %H:%M:%S")
+echo "Data specifica: $specific_date"
+```
+
+### Calcolare la differenza tra due date:
+```bash
+#!/bin/bash
+
+# Data attuale
+current_date=$(date +%s)
+
+# Data futura (ad esempio, 7 giorni dopo)
+future_date=$(date -d "7 days" +%s)
+
+# Calcola la differenza
+difference=$((future_date - current_date))
+days=$((difference / 86400))  # 86400 secondi in un giorno
+
+echo "La differenza è di $days giorni."
+```
+
+____________________
+
+**Bash Sleep**
 
 
+sleep 5: sospende l'esecuzione per 5 secondi.
+sleep 1m: sospende l'esecuzione per 1 minuto.
+sleep 2h: sospende l'esecuzione per 2 ore.
 
+```bash
+
+#!/bin/bash
+
+echo "Questo è il punto A"
+sleep 5  # Sospende l'esecuzione per 5 secondi
+echo "Cinque secondi dopo, questo è il punto B"
+```
 
 
 
