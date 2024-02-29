@@ -601,7 +601,146 @@ sottostringa=${stringa:12:5}
 echo $sottostringa  # Output: Mondo
 ```
 
- la sottostringa viene estratta dalla posizione 12, con una lunghezza di 5 caratteri.
+la sottostringa viene estratta dalla posizione 12, con una lunghezza di 5 caratteri.
+
+
+
+# If statements
+
+
+
+1. **Uguaglianza (`==`):**
+   ```bash
+   numero1=10
+   numero2=20
+
+   if [ $numero1 == $numero2 ]; then
+       echo "I numeri sono uguali."
+   else
+       echo "I numeri non sono uguali."
+   fi
+   ```
+
+2. **Diversità (`!=`):**
+   ```bash
+   stringa1="Hello"
+   stringa2="World"
+
+   if [ "$stringa1" != "$stringa2" ]; then
+       echo "Le stringhe sono diverse."
+   else
+       echo "Le stringhe sono uguali."
+   fi
+   ```
+
+3. **Maggiore (`-gt`):**
+   ```bash
+   numero1=30
+   numero2=20
+
+   if [ $numero1 -gt $numero2 ]; then
+       echo "Il primo numero è maggiore del secondo."
+   else
+       echo "Il primo numero non è maggiore del secondo."
+   fi
+   ```
+
+4. **Minore (`-lt`):**
+   ```bash
+   numero1=15
+   numero2=25
+
+   if [ $numero1 -lt $numero2 ]; then
+       echo "Il primo numero è minore del secondo."
+   else
+       echo "Il primo numero non è minore del secondo."
+   fi
+   ```
+
+5. **Maggiore o Uguale (`-ge`):**
+   ```bash
+   numero1=20
+   numero2=20
+
+   if [ $numero1 -ge $numero2 ]; then
+       echo "Il primo numero è maggiore o uguale al secondo."
+   else
+       echo "Il primo numero non è maggiore o uguale al secondo."
+   fi
+   ```
+
+6. **Minore o Uguale (`-le`):**
+   ```bash
+   numero1=25
+   numero2=30
+
+   if [ $numero1 -le $numero2 ]; then
+       echo "Il primo numero è minore o uguale al secondo."
+   else
+       echo "Il primo numero non è minore o uguale al secondo."
+   fi
+   ```
+
+In Bash, puoi utilizzare operatori logici per combinare o valutare condizioni in modo più complesso. Ecco alcuni degli operatori logici più comuni:
+
+### AND (`&&`):
+```bash
+#!/bin/bash
+
+numero=15
+
+if [ $numero -gt 10 ] && [ $numero -lt 20 ]; then
+    echo "Il numero è maggiore di 10 e minore di 20."
+else
+    echo "Il numero non soddisfa la condizione."
+fi
+```
+
+
+### OR (`||`):
+```bash
+#!/bin/bash
+
+giorno="Lunedì"
+
+if [ "$giorno" == "Sabato" ] || [ "$giorno" == "Domenica" ]; then
+    echo "È un giorno del fine settimana."
+else
+    echo "Non è un giorno del fine settimana."
+fi
+```
+
+Il blocco di codice nell'istruzione `if` verrà eseguito se la variabile `$giorno` è uguale a "Sabato" o "Domenica".
+
+### NOT (`!`):
+```bash
+#!/bin/bash
+
+flag=true
+
+if ! $flag; then
+    echo "La variabile flag è falsa."
+else
+    echo "La variabile flag è vera."
+fi
+```
+
+
+### Esempio combinato:
+```bash
+#!/bin/bash
+
+numero=25
+
+if [ $numero -lt 10 ] || [ $numero -gt 20 ]; then
+    echo "Il numero è minore di 10 o maggiore di 20."
+else
+    echo "Il numero non soddisfa la condizione."
+fi
+```
+
+
+
 
 
 
