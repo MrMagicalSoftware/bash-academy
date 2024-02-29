@@ -742,6 +742,62 @@ fi
 
 
 
+```bash
+if [ condition ]; then
+    # Blocco di codice da eseguire se la condizione è vera
+else
+    # Blocco di codice da eseguire se la condizione è falsa
+fi
+```
+
+
+### Esempio di base:
+```bash
+#!/bin/bash
+
+numero=5
+
+if [ $numero -eq 5 ]; then
+    echo "Il numero è 5."
+else
+    echo "Il numero non è 5."
+fi
+```
+
+### Esempio con condizione complessa:
+```bash
+#!/bin/bash
+
+nome="Alice"
+età=25
+
+if [ "$nome" == "Alice" ] && [ $età -eq 25 ]; then
+    echo "Il nome è Alice e l'età è 25."
+else
+    echo "Condizione non soddisfatta."
+fi
+```
+
+### Esempio con l'uso di `elif`:
+```bash
+#!/bin/bash
+
+punteggio=75
+
+if [ $punteggio -ge 90 ]; then
+    echo "Voto A"
+elif [ $punteggio -ge 80 ]; then
+    echo "Voto B"
+elif [ $punteggio -ge 70 ]; then
+    echo "Voto C"
+else
+    echo "Voto insufficiente"
+fi
+```
+
+
+
+
 
 
 
