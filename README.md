@@ -847,6 +847,77 @@ case $giorno in
 esac
 ```
 
+_______________________________
+
+# Bash For Loop
+
+
+Il ciclo `for` in Bash è utilizzato per iterare attraverso una sequenza di elementi, 
+come una lista di valori o gli elementi di un array. 
+
+
+```bash
+for variabile in valore1 valore2 valore3
+do
+    # Comandi da eseguire per ogni valore
+done
+```
+
+
+### Iterare attraverso una sequenza di numeri:
+```bash
+#!/bin/bash
+
+echo "Stampo numeri da 1 a 5:"
+for i in {1..5}
+do
+    echo $i
+done
+```
+
+### Iterare attraverso una lista di valori:
+```bash
+#!/bin/bash
+
+frutta="mela pera banana fragola"
+for frutto in $frutta
+do
+    echo "Ho una $frutto"
+done
+```
+
+### Iterare attraverso gli elementi di un array:
+```bash
+#!/bin/bash
+
+colori=("rosso" "verde" "blu")
+for colore in "${colori[@]}"
+do
+    echo "Il colore è $colore"
+done
+```
+
+### Iterare attraverso i file in una directory:
+```bash
+#!/bin/bash
+
+echo "Lista dei file nella directory corrente:"
+for file in *
+do
+    echo $file
+done
+```
+
+### Iterare attraverso una sequenza di numeri con incrementi:
+```bash
+#!/bin/bash
+
+echo "Stampo numeri da 0 a 10 con incrementi di 2:"
+for ((i=0; i<=10; i+=2))
+do
+    echo $i
+done
+```
 
 
 
