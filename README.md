@@ -433,5 +433,188 @@ sleep 5  # Sospende l'esecuzione per 5 secondi
 echo "Cinque secondi dopo, questo è il punto B"
 ```
 
+____________________________________________________
+
+# Bash Arithmetic Operators
+
+In Bash, puoi eseguire operazioni aritmetiche utilizzando diversi operatori. Ecco alcuni degli operatori aritmetici comuni:
+
+1. **Addizione `+`:**
+   ```bash
+   risultato=$((5 + 3))
+   echo $risultato  # Output: 8
+   ```
+
+2. **Sottrazione `-`:**
+   ```bash
+   risultato=$((10 - 4))
+   echo $risultato  # Output: 6
+   ```
+
+3. **Moltiplicazione `*`:**
+   ```bash
+   risultato=$((3 * 7))
+   echo $risultato  # Output: 21
+   ```
+
+4. **Divisione `/`:**
+   ```bash
+   risultato=$((20 / 4))
+   echo $risultato  # Output: 5
+   ```
+
+5. **Modulo `%` (Resto della divisione):**
+   ```bash
+   risultato=$((15 % 4))
+   echo $risultato  # Output: 3
+   ```
+
+6. **Incremento `++`:**
+   ```bash
+   numero=5
+   ((numero++))
+   echo $numero  # Output: 6
+   ```
+
+7. **Decremento `--`:**
+   ```bash
+   numero=8
+   ((numero--))
+   echo $numero  # Output: 7
+   ```
+
+8. **Assegnazione combinata `+=`, `-=`, `*=`, `/=`:**
+   ```bash
+   valore=10
+   ((valore += 5))
+   echo $valore  # Output: 15
+   ```
+
+9. **Espressioni aritmetiche con `$((...))`:**
+   Puoi utilizzare questa sintassi per eseguire espressioni aritmetiche più complesse:
+   ```bash
+   risultato=$(( (10 + 5) * 2 - 4 ))
+   echo $risultato  # Output: 22
+   ```
+
+__________________________________________________
+
+
+# Bash string 
+
+
+
+In Bash, le stringhe sono una sequenza di caratteri e possono essere assegnate utilizzando singoli apici (`'`) o doppi apici (`"`).
+
+
+
+### Assegnare una stringa:
+```bash
+stringa_singola='Questo è un esempio con apici singoli.'
+stringa_doppia="Questo è un esempio con apici doppi."
+```
+
+### Concatenare stringhe:
+```bash
+nome="John"
+cognome="Doe"
+nome_completo="$nome $cognome"
+echo $nome_completo  # Output: John Doe
+```
+
+### Lunghezza di una stringa:
+```bash
+stringa="Hello, World!"
+lunghezza=${#stringa}
+echo $lunghezza  # Output: 13
+```
+
+### Estrai sottostringa:
+```bash
+stringa="Hello, World!"
+sottostringa=${stringa:0:5}
+echo $sottostringa  # Output: Hello
+```
+
+### Concatenare stringhe con operatore `+=`:
+```bash
+saluto="Ciao, "
+nome="Alice"
+saluto_completo=$saluto$nome
+echo $saluto_completo  # Output: Ciao, Alice
+```
+
+### Sostituire parte di una stringa:
+```bash
+frase="I love programming in Java."
+nuova_frase=${frase/Java/Bash}
+echo $nuova_frase  # Output: I love programming in Bash.
+```
+
+### Uppercase e lowercase:
+```bash
+testo="Hello World"
+testo_maiuscolo=${testo^^}
+testo_minuscolo=${testo,,}
+echo $testo_maiuscolo  # Output: HELLO WORLD
+echo $testo_minuscolo  # Output: hello world
+```
+
+
+
+
+
+### Divisione di una Stringa:
+Usa la variabile `IFS` (Internal Field Separator) insieme al comando `read` per dividere una stringa in un array:
+
+```bash
+stringa="Ciao,Mondo,Come,Stai"
+IFS=',' read -ra array <<< "$stringa"
+
+# Stampa ogni elemento dell'array
+for elemento in "${array[@]}"; do
+    echo $elemento
+done
+```
+
+
+### Ricerca di Sottostringa:
+usa la costruzione `[[ ... ]]` insieme al carattere jolly `*` per verificare se una stringa contiene una sottostringa:
+
+```bash
+stringa="Ciao, Mondo!"
+sottostringa="Mondo"
+
+if [[ $stringa == *$sottostringa* ]]; then
+    echo "La stringa contiene la sottostringa."
+else
+    echo "La stringa non contiene la sottostringa."
+fi
+```
+
+### Estrazione di Sottostringa:
+
+```bash
+stringa="Buongiorno, Mondo!"
+sottostringa=${stringa:12:5}
+
+echo $sottostringa  # Output: Mondo
+```
+
+ la sottostringa viene estratta dalla posizione 12, con una lunghezza di 5 caratteri.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
