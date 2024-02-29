@@ -977,7 +977,8 @@ __________________________________________
 
 
 
-Le funzioni in Bash sono porzioni di codice riutilizzabili che possono essere definite e chiamate all'interno di uno script o di un programma Bash. Ecco la sintassi di base per definire e chiamare una funzione in Bash:
+Le funzioni in Bash sono porzioni di codice riutilizzabili che possono essere definite e chiamate all'interno di uno script o di un programma Bash.
+
 
 ### Definizione di una funzione:
 ```bash
@@ -993,7 +994,6 @@ nome_funzione() {
 nome_funzione
 ```
 
-Ecco un esempio pratico di definizione e chiamata di una funzione:
 
 ```bash
 #!/bin/bash
