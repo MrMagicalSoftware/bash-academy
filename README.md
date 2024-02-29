@@ -970,6 +970,92 @@ do
 done
 ```
 
+__________________________________________
+
+
+# bash-functions
+
+
+
+Le funzioni in Bash sono porzioni di codice riutilizzabili che possono essere definite e chiamate all'interno di uno script o di un programma Bash. Ecco la sintassi di base per definire e chiamare una funzione in Bash:
+
+### Definizione di una funzione:
+```bash
+nome_funzione() {
+    # Comandi da eseguire all'interno della funzione
+    echo "Questa è una funzione."
+}
+```
+
+### Chiamata di una funzione:
+```bash
+# Chiamata alla funzione
+nome_funzione
+```
+
+Ecco un esempio pratico di definizione e chiamata di una funzione:
+
+```bash
+#!/bin/bash
+
+# Definizione di una funzione
+saluta() {
+    echo "Ciao, benvenuto!"
+}
+
+# Chiamata alla funzione
+saluta
+```
+
+#### Parametri delle funzioni:
+
+
+
+```bash
+#!/bin/bash
+
+# Funzione con parametri
+saluta_persona() {
+    nome=$1
+    echo "Ciao, $nome! Benvenuto!"
+}
+
+# Chiamata alla funzione con un parametro
+saluta_persona "Alice"
+```
+
+
+#### Valore restituito dalle funzioni:
+Una funzione in Bash può restituire un valore tramite l'istruzione `return`:
+
+```bash
+#!/bin/bash
+
+# Funzione con valore restituito
+moltiplica() {
+    risultato=$(( $1 * $2 ))
+    return $risultato
+}
+
+# Chiamata alla funzione e ottenere il valore restituito
+moltiplicazione=$(moltiplica 3 4)
+echo "Il risultato della moltiplicazione è: $moltiplicazione"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
