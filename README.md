@@ -241,6 +241,127 @@ In Bash, i tipi di dati principali sono:
    valore_letterale="Questo è un valore letterale"
    ```
 
+**system defined variables**
+
+
+In Bash, ci sono alcune variabili predefinite di sistema, spesso chiamate "system-defined variables" o "variables predefinite del sistema". 
+
+Per visualizzare tutte le variabili attive  `env` o `set`.
+
+
+1. **$HOME:**
+   Rappresenta il percorso della directory home dell'utente corrente.
+
+   ```bash
+   echo $HOME
+   ```
+
+2. **$USER o $LOGNAME:**
+   Contiene il nome dell'utente corrente.
+
+   ```bash
+   echo $USER
+   ```
+
+3. **$PATH:**
+   Specifica una lista di directory in cui il sistema cerca i comandi eseguibili.
+
+   ```bash
+   echo $PATH
+   ```
+
+4. **$PWD:**
+   Rappresenta il percorso corrente (working directory).
+
+   ```bash
+   echo $PWD
+   ```
+
+5. **$SHELL:**
+   Contiene il percorso dell'interprete della shell corrente.
+
+   ```bash
+   echo $SHELL
+   ```
+
+6. **$BASH_VERSION:**
+   Mostra la versione di Bash in uso.
+
+   ```bash
+   echo $BASH_VERSION
+   ```
+
+7. **$RANDOM:**
+   Genera un numero casuale.
+
+   ```bash
+   echo $RANDOM
+   ```
+
+8. **$UID:**
+   Rappresenta l'ID dell'utente corrente.
+
+   ```bash
+   echo $UID
+   ```
+
+9. **$PPID:**
+   Contiene l'ID del processo padre del processo corrente.
+
+   ```bash
+   echo $PPID
+   ```
+
+10. **$? (Exit Status):**
+    Restituisce lo stato di uscita dell'ultimo comando eseguito. Un valore di 0 indica successo.
+
+    ```bash
+    echo $?
+    ```
+
+
+```bash
+#! /bin/bash  
+   # Bash System-defined Variables  
+   echo $HOME # Home Directory  
+   echo $PWD # current working directory  
+   echo $BASH # Bash shell name  
+   echo $BASH_VERSION # Bash shell Version  
+   echo $LOGNAME # Name of the Login User  
+   echo $OSTYPE # Type of OS 
+```
+
+_________________________________
+
+
+**esempio con read**
+
+```bash
+#!/bin/bash
+
+# Chiedi all'utente di inserire un testo
+echo "Inserisci il tuo nome:"
+read nome
+
+# Stampa il nome inserito
+echo "Ciao, $nome! Benvenuto."
+
+# Chiedi all'utente di inserire un numero
+echo "Inserisci un numero:"
+read numero
+
+# Esegui un'operazione con il numero inserito
+doppio=$((numero * 2))
+
+# Stampa il risultato
+echo "Il doppio di $numero è $doppio."
+```
+
+
+
+
+
+
 
 
 
