@@ -116,7 +116,50 @@ chmod +x bash_script.sh
     #This is another single line comment  
 ```
 
+**Bash Multi Line Comment**
 
+
+```bash
+    #!/bin/bash  
+      
+    <<COMMENTS  
+        This is the first comment  
+        This is the second comment  
+        This is the third comment  
+    COMMENTS  
+      
+    echo "Hello World"  
+```
+
+**Quote with String**
+
+While working with simple texts and string, there will be no differences either we use a single quote or double quote.
+
+
+```bash
+    #!/bin/bash  
+      
+    # String in single quote  
+    echo 'Hello User'  
+    echo  
+    # String in double quote  
+    echo "we are javatpoint"  
+
+```
+
+**Quote with Variable**
+
+It should be noted that the shell variable expansion will only work with double-quotes. If you define any variable in single quotes, then it will not be considered as a variable. Let's understand this with an example:
+
+```bash
+
+    #!/bin/bash  
+      
+    name="You are welcome at javatpoint"  
+      
+    echo "$name"  
+    echo '$name'  
+```
 
 
 
