@@ -795,6 +795,57 @@ else
 fi
 ```
 
+______________________________________________________
+
+
+**Istruzione Case**
+
+L'istruzione `case` in Bash è utilizzata per eseguire una serie di comandi in base al valore di una variabile o espressione.
+È spesso utilizzata come alternativa a una serie di istruzioni `if-elif-else` quando è necessario eseguire diverse azioni in base al valore di una variabile.
+
+
+```bash
+case valore in
+    pattern1)
+        # Comandi da eseguire se il valore corrisponde a pattern1
+        ;;
+    pattern2)
+        # Comandi da eseguire se il valore corrisponde a pattern2
+        ;;
+    pattern3)
+        # Comandi da eseguire se il valore corrisponde a pattern3
+        ;;
+    *)
+        # Comandi da eseguire se nessun pattern corrisponde
+        ;;
+esac
+```
+
+
+In questo esempio, l'istruzione `case` valuta la variabile `$giorno` rispetto ai vari pattern specificati e esegue il blocco di comandi corrispondente al primo pattern che trova. L'uso di `|` (pipe) all'interno di un pattern indica un'alternativa, permettendo di corrispondere a più valori. Se nessun pattern corrisponde, viene eseguito il blocco `*)` (asterisco), che funge da "altro" o "default".
+
+
+
+```bash
+#!/bin/bash
+
+giorno="Lunedì"
+
+case $giorno in
+    Lunedì)
+        echo "Primo giorno della settimana."
+        ;;
+    Martedì|Mercoledì|Giovedì|Venerdì)
+        echo "Giorni lavorativi."
+        ;;
+    Sabato|Domenica)
+        echo "Fine settimana!"
+        ;;
+    *)
+        echo "Non riconosco questo giorno."
+        ;;
+esac
+```
 
 
 
