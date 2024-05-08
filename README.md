@@ -109,7 +109,7 @@ chmod +x bash_script.sh
       
     #This is a single-line comment in Bash Script.  
     echo "Enter your name:"  
-    read $name  
+    read name  
     echo  
     #echo output, its also a single line comment  
     echo "The current user name is $name"  
