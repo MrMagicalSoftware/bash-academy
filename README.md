@@ -681,7 +681,21 @@ la sottostringa viene estratta dalla posizione 12, con una lunghezza di 5 caratt
    fi
    ```
 
-In Bash, puoi utilizzare operatori logici per combinare o valutare condizioni in modo più complesso. Ecco alcuni degli operatori logici più comuni:
+**Esempio di elif**
+```
+#!/bin/bash
+
+num=10
+
+if [ $num -eq 10 ]; then
+  echo "Il numero è uguale a 10"
+elif [ $num -gt 10 ]; then
+  echo "Il numero è maggiore di 10"
+else
+  echo "Il numero è minore di 10"
+fi
+```
+
 
 ### AND (`&&`):
 ```bash
