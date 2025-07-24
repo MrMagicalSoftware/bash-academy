@@ -1,7 +1,7 @@
 # bash-academy
 
 
-Common Linux Durectiry Names 
+Common Linux Directory Names 
 
 / -> root of the virtual directory , where normally , no files are placed <br>
 /bin -> binary directory <br>
