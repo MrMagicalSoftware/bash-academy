@@ -21,6 +21,21 @@ for dir in "$path"/*/; do
     # 3) Verifica la creazione degli archivi
     if [ -f "${dir_name}.tar.gz" ]; then
       echo "Archivio creato: ${dir_name}.tar.gz"
+      
+      # 4) Invia l'archivio al server remoto
+      echo "Invio dell'archivio a un server remoto..."
+      echo "Inserisci l'utente del server remoto (es. user@host):"
+      read remote_user
+      echo "Inserisci il percorso di destinazione sul server remoto:"
+      read remote_path
+      
+      scp "${dir_name}.tar.gz" "${remote_user}:${remote_path}"
+      
+      if [ $? -eq 0 ]; then
+        echo "Archivio inviato con successo: ${dir_name}.tar.gz"
+      else
+        echo "Errore nell'invio dell'archivio: ${dir_name}.tar.gz"
+      fi
     else
       echo "Errore nella creazione dell'archivio: ${dir_name}.tar.gz"
     fi
